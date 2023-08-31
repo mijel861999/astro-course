@@ -1,0 +1,35 @@
+---
+console.log("Hola para el servidor de desarrollo");
+const title = "Título de mi aplicación en Astro";
+const color = "danger";
+const hobbies = ["basket", "Musica"];
+const isActive = true
+---
+
+<section>
+  <div class={color}>{title}</div>
+  <ul class="info">
+    {hobbies.map((hobbie) => <li>{hobbie}</li>)}
+  </ul>
+  <h1 class="title">{isActive ? 'Esta activo' : 'No está activo'}</h1>
+</section>
+
+<script>
+  console.log("Hola mundo");
+</script>
+
+<style>
+  body {
+    background-color: black;
+  }
+  .title {
+    color: skyblue;
+  }
+
+  .danger {
+    color: red;
+  }
+  .info {
+    color: yellow;
+  }
+</style>
